@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.vscode/
+.DS_Store
+.idea/
+.next/
+siteConfig.json
+yarn-error.log
+log
+config.json
+jsconfig.json
+.env
+.env.local
+.history
