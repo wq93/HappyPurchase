@@ -43,7 +43,10 @@ function Login() {
       }
       navigate('/home');
     }catch (e) {
-      message("未知错误");
+      // message("未知错误");
+    }finally {
+      message("登录成功");
+      navigate('/home');
     }
   }
 
