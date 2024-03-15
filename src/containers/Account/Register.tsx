@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.scss";
-import { message } from "../../utils/message";
+import { message } from "@/utils/message";
 
 const Register = () => {
   const [name, setName] = useState("");

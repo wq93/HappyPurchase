@@ -20,11 +20,11 @@ function HomeIndex() {
 
   return (
     <div className="page home-page">
-      <Banner location={data?.data.location} banners={data?.data.banners} />
-      <Categories categories={data?.data.categories} />
+      <Banner />
+      <Categories />
 
-      <Card title="新品尝鲜" list={data?.data.freshes} />
-      <Card title="限时抢购" list={data?.data.freshes} />
+      <Card />
+      <Card />
 
       <div className="bottom">- 我是有底线的 -</div>
       {/*<Docker />*/}

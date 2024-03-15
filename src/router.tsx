@@ -1,10 +1,10 @@
 // 路由文件
 import {createHashRouter} from 'react-router-dom'
 
-import Guide from "./containers/Guide";
-import Account from "./containers/Account";
-import Login from "./containers/Account/Login";
-import Register from "./containers/Account/Register";
+import Guide from "@/containers/Guide";
+import Account from "@/containers/Account";
+import Login from "@/containers/Account/Login";
+import Register from "@/containers/Account/Register";
 
 const router = createHashRouter([
   {

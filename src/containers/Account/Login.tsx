@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./style.scss";
-import useRequest from "../../hooks/useRequest";
-import {message} from "../../utils/message";
+import useRequest from "@/hooks/useRequest";
+import {message} from "@/utils/message";
 import {useNavigate} from 'react-router-dom'
 
 type ResponseType = {
