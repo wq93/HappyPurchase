@@ -11,7 +11,6 @@ function useRequest<T>(option: AxiosRequestConfig & { manual?: boolean}) {
   const [loaded, setLoaded] = useState(false)
   const controllerRef = useRef(new AbortController())
 
-  // 取消请求发送
   const cancel = () => {
     controllerRef.current.abort()
   }

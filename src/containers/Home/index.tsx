@@ -1,7 +1,7 @@
 import "swiper/css"
 import './style.scss'
 import { ResponseType } from "./types";
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import useRequest from "@/hooks/useRequest";
 
 import Banner from "@/containers/Home/components/Banner";
@@ -9,7 +9,7 @@ import Categories from "./components/Categories";
 import Card from "./components/Card";
 
 const defaultRequestData = {
-  url: "https://www.fastmock.site/mock/f307fca25de6a901228480d6513e9950/api/home",
+  url: "home.json",
   method: "get",
   manual: true,
 };
@@ -17,6 +17,18 @@ const defaultRequestData = {
 function HomeIndex() {
   const [requestData, setRequestData] = useState(defaultRequestData);
   const { data } = useRequest<ResponseType>(requestData);
+  console.log(data, 'data');
+  useEffect(() => {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position, 'position');
+        },
+        (error) => {
+          console.log(error, 'getCurrentPositionError');
+        }, { timeout: 1000})
+    }
+  }, [])
 
   return (
     <div className="page home-page">
